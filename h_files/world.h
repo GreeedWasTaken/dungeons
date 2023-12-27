@@ -22,6 +22,14 @@ class world{
   room exit;
 
 public:
+  int get_room_id(int pos[2]);
+
+  int *get_active_room_pos();
+
+  bool is_exit(int pos[2]);
+
+  room get_active_room();
+
   // handles creation of the world
   void init();
   // roomID: room id of the room you want to make as the active room
@@ -34,12 +42,6 @@ public:
   bool* rooms_player_can_enter();
   // handles the mapping of the dungeon.
   void map_rooms(int pos[2]);
-
-  int get_room_id(int pos[2]);
-
-  int *get_active_room_pos();
-
-  bool is_exit(int pos[2]);
 
   void assign_exit();
 };
